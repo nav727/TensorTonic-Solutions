@@ -7,6 +7,7 @@ def matrix_transpose(A: list) -> np.ndarray:
     rows, cols = len(A), len(A[0])
     A_t = np.zeros(shape=(cols, rows))
 
+    # use index based solution
     for r in range(rows):
         for c in range(cols):
             A_t[c][r] = A[r][c]
