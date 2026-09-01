@@ -16,4 +16,4 @@ def mean_median_mode(x: list) -> dict:
         'mean'  : float(np.mean(x)),
         'median' : float(np.median(x)),
         'mode'   : float(mode)
-           }
+    }
