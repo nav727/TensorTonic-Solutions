@@ -7,6 +7,8 @@ def mean_median_mode(x: list) -> dict:
     """
     
     x = np.array(x)
+
+    # no mode by default in numpy
     distinct_nums, counts = np.unique(x, return_counts=True)
     mode = distinct_nums[np.argmax(counts)]
     
