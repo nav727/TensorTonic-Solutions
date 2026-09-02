@@ -10,6 +10,6 @@ def filter_and_extract(data, row_start, row_stop, threshold):
     data = data[row_start : row_stop, :]
     data = np.matrix.flatten(data)
     
-    # remove 
+    # mask will remove the elements from 1D array
     mask = (data > threshold)
     return data[mask]
