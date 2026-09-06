@@ -13,5 +13,5 @@ def norm_gate(X, W, threshold):
     mask = (norm >= threshold)
     mask = mask[:, np.newaxis]
 
-    # zero out basis mask
+    # zero out based on mask
     return np.where(mask > 0, linear_transform, 0)
