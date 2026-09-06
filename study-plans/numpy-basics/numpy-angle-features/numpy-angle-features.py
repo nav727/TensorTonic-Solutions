@@ -6,6 +6,7 @@ def angle_features(angles):
     angles = np.array(angles)
 
     # angles should be in radians
+    # convert to degrees using 
     sin_angles = np.sin(angles)
     cos_angles = np.cos(angles)
     tan_angles = np.tan(angles)
