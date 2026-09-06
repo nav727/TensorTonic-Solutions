@@ -6,11 +6,13 @@ def norm_diff(a, b, lo, hi):
     a = np.array(a, dtype='float64')
     b = np.array(b, dtype='float64')
 
+    # clip to given low and high
     a = np.clip(a, lo, hi)
     b = np.clip(b, lo, hi)
 
-    
+    # scale with given low and high
     a = (a - lo) / (hi - lo)
     b = (b - lo) / (hi - lo)
-    
+
+    # abs diff
     return np.abs(a - b)
