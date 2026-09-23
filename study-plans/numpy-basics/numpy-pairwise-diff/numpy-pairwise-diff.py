@@ -6,8 +6,6 @@ def pairwise_diff(a: list) -> np.ndarray:
     """
     
     a = np.array(a, dtype='float64')
-    ans = []
-    for ele in a:
-        ans.append(ele - a)
 
-    return np.array(ans,dtype='float64')
+    return a[:,None] - a[None,:]
+    
