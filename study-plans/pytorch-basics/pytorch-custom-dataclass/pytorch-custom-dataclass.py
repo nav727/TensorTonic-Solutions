@@ -8,10 +8,10 @@ class CSVDataset(Dataset):
     def __init__(self, data: list, label_col: int):
         
         data = torch.tensor(data, dtype=torch.float32)
-        self.y = data[:, [label_col]]
 
         feature_cols_idx = [col_idx for col_idx in range(data.shape[1]) if col_idx != label_col]
-        self.X = data[:, feature_cols_idx] 
+        self.X = data[:, feature_cols_idx]
+        self.y = data[:,[label_col]]
       
     def __len__(self) -> int:
         """
