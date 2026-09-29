@@ -7,7 +7,10 @@ def create_balanced_loader(features: torch.Tensor, labels: torch.Tensor, batch_s
     Returns a DataLoader with inverse-frequency sampling and replacement.
     """
 
+    # counts for each label    
     count = torch.bincount(labels)
+
+    # for inverse sampling
     proportions = 1 / count
     weights = proportions[labels]
     
