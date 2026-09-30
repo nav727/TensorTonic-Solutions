@@ -3,7 +3,9 @@ def pad_and_truncate(sequences: list, max_length: int, pad_value: int = 0) -> li
     Returns one integer list of length max_length per input sequence.
     """
 
+    # dont modify the original input
     ans = []
+    
     for idx in range(len(sequences)):
         
         curr_len = len(sequences[idx])
@@ -15,8 +17,8 @@ def pad_and_truncate(sequences: list, max_length: int, pad_value: int = 0) -> li
 
         # pad
         elif curr_len < max_length:
-            ele_to_pad = max_length - curr_len
-            ans.append(curr_lst + [pad_value]*ele_to_pad)
+            pad_count = max_length - curr_len
+            ans.append(curr_lst + [pad_value]*pad_count)
 
         else:
             ans.append(curr_lst)
